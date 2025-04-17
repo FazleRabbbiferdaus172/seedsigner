@@ -1567,7 +1567,8 @@ class SeedTranscribeSeedQRZoomedInView(View):
         self.seedqr_format = seedqr_format
         self.seed = self.controller.get_seed(seed_num)
         self.initial_block_x = initial_block_x
-        self.initial_block_y = initial_block_y 
+        self.initial_block_y = initial_block_y
+        self.allow_screensaver = False
 
 
     def run(self):
