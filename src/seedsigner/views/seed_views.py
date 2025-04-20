@@ -1568,7 +1568,7 @@ class SeedTranscribeSeedQRZoomedInView(View):
         self.seed = self.controller.get_seed(seed_num)
         self.initial_block_x = initial_block_x
         self.initial_block_y = initial_block_y
-        self.allow_screensaver = False
+        self.allow_screensaver = False  # Screensaver disabled during seed QR transcription, to avoid interruptions
 
 
     def run(self):
