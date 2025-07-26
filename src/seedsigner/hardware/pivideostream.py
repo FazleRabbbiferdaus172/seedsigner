@@ -1,11 +1,8 @@
 # import the necessary packages
-import logging
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 from threading import Thread
 import time
-
-logger = logging.getLogger(__name__)
 
 
 # Modified from: https://github.com/jrosebr1/imutils
@@ -44,7 +41,7 @@ class PiVideoStream:
 			# if the thread indicator variable is set, stop the thread
 			# and resource camera resources
 			if self.should_stop:
-				logger.info("PiVideoStream: closing everything")
+				print("PiVideoStream: closing everything")
 				self.stream.close()
 				self.rawCapture.close()
 				self.camera.close()
