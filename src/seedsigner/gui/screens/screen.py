@@ -1513,12 +1513,11 @@ class ScreensaverScreen(LogoScreen):
 
         except KeyboardInterrupt as e:
             # Exit triggered; close gracefully
-            logger.info("Shutting down Screensaver")
-
             # Have to let the interrupt bubble up to exit the main app
             raise e
 
         finally:
+            logger.info("Shutting down Screensaver")
             self._is_running = False
 
             # Restore the original screen
